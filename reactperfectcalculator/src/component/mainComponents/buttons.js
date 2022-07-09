@@ -14,11 +14,11 @@ function Buttons(){
         if(screenResult.innerHTML.length < 12){
             
             (screenResult.innerHTML==='0' || screenResult.innerHTML==='+' || screenResult.innerHTML==='-' || screenResult.innerHTML==='%' || screenResult.innerHTML==='X' || screenResult.innerHTML==='/')  ? screenResult.innerHTML=value : screenResult.innerHTML += value;
-            if(screenResult.innerHTML==='.'){screenResult.innerHTML="0.";}
+           if(screenResult.innerHTML==='.'){screenResult.innerHTML="0.";}
             num1 = parseFloat(screenResult.innerHTML);
         
             //Chech for comas to prevent errors
-            if(screenResult.innerHTML.search(".") === false){
+            if(screenResult.innerHTML.indexOf('.') === -1){
         
                 //Check the size
                 switch(screenResult.innerHTML.length){
@@ -74,7 +74,7 @@ function Buttons(){
 
     function Multi(){
         num2 = num1;
-        screenResult.innerHTML="X"
+        screenResult.innerHTML="X";
         type="X";
     }
 
@@ -93,17 +93,14 @@ function Buttons(){
     function Delete(){
         let me = screenResult.innerHTML.length;
         let deleteResult = screenResult.innerHTML.substring(0,(me-1));
-        //let deleteResult=0;
-        //let editedString = screenResult.innerHTML.replaceAll(".","");
-        //let comas = editedString.length;
-        //comas%3 === 1 && comas > 2 ? deleteResult = screenResult.innerHTML.substring(0,(me-2)) : deleteResult = screenResult.innerHTML.substring(0,(me-1));
+        
         deleteResult === "" ? deleteResult="0" : deleteResult += ""; 
         screenResult.innerHTML = deleteResult;
         console.log(deleteResult,me%3);
         num1=parseFloat(deleteResult);
 
           //Chech for comas to prevent errors
-          if(screenResult.innerHTML.search(".") === false){
+          if(screenResult.innerHTML.indexOf('.') === -1){
         
             //Check the size
             switch(screenResult.innerHTML.length){
