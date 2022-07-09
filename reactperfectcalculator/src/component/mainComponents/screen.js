@@ -4,7 +4,9 @@ function Screen(){
     return(
         <div>
             <div id='calScreen'>
-                <p id="calResults">0</p>
+                <p id="numLength"></p>
+                <p id="calResults" maxsize="12">0</p>
+
             </div>
 
         </div>

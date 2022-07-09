@@ -1,6 +1,7 @@
 Header{
     color:blueviolet;
     text-align: center;
+    
 }
 body{
     background-color:azure;
@@ -19,6 +20,7 @@ body{
     border-radius: 10px;
     background-color:antiquewhite;
     box-shadow: 3px 3px 5px black;
+    margin-top: 60px;;
     
 }
 
@@ -56,7 +58,7 @@ body{
 }
 
 .calBut{
-    width: 75px;
+    width: 70px;
     height: 50px;
     border: 2px solid darkblue;
     box-shadow: 1px 1px 3px black;
@@ -69,3 +71,20 @@ body{
     background-color:cornsilk;
 }
 
+#calFooter{
+    position:fixed;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    
+}
+
+#header{
+    width: 100%;;
+    position: fixed;
+    top:0px;
+    background-color: black;
+    margin:0 ;
+}
